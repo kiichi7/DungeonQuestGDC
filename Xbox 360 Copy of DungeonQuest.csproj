@@ -1,0 +1,148 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{903F2B60-EBFE-4C64-9BF6-7686D8B1BC73}</ProjectGuid>
+    <ProjectTypeGuids>{2DF5C3F4-5A5F-47a9-8E94-23B4456F55E2};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DungeonQuest</RootNamespace>
+    <AssemblyName>DungeonQuest</AssemblyName>
+    <XnaFrameworkVersion>v2.0</XnaFrameworkVersion>
+    <XnaPlatform>Xbox 360</XnaPlatform>
+    <XnaCrossPlatformGroupID>c096c6a0-9dcc-498e-a38d-7b556d568a43</XnaCrossPlatformGroupID>
+    <ApplicationIcon>DungeonQuest.ico</ApplicationIcon>
+    <Thumbnail>DungeonQuest.png</Thumbnail>
+    <StartupObject>DungeonQuest.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
+    <OutputPath>bin\Xbox 360\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Collision\BaseCollisionObject.cs" />
+    <Compile Include="Collision\BoxHelper.cs" />
+    <Compile Include="Collision\CaveCollision.cs" />
+    <Compile Include="Collision\CollisionGeometry.cs" />
+    <Compile Include="Collision\CollisionHelper.cs" />
+    <Compile Include="Collision\CollisionNode.cs" />
+    <Compile Include="Collision\CollisionPolygon.cs" />
+    <Compile Include="Collision\GameCollisionObject.cs" />
+    <Compile Include="Collision\Ray.cs" />
+    <Compile Include="DungeonQuestGame.cs" />
+    <Compile Include="GameLogic\AnimatedGameObject.cs" />
+    <Compile Include="GameLogic\BaseCamera.cs" />
+    <Compile Include="GameLogic\GameManager.cs" />
+    <Compile Include="GameLogic\Player.cs" />
+    <Compile Include="GameLogic\Projectile.cs" />
+    <Compile Include="GameLogic\RotationCamera.cs" />
+    <Compile Include="GameLogic\SimpleCamera.cs" />
+    <Compile Include="GameLogic\StaticGameObject.cs" />
+    <Compile Include="GameLogic\ThirdPersonCamera.cs" />
+    <Compile Include="GameScreens\EndScreen.cs" />
+    <Compile Include="GameScreens\GameScreen.cs" />
+    <Compile Include="GameScreens\Highscores.cs" />
+    <Compile Include="GameScreens\IGameScreen.cs" />
+    <Compile Include="GameScreens\Options.cs" />
+    <Compile Include="GameSettings.cs" />
+    <Compile Include="Game\BaseGame.cs" />
+    <Compile Include="Game\EffectManager.cs" />
+    <Compile Include="Game\LightManager.cs" />
+    <Compile Include="Game\ScreenshotCapturer.cs" />
+    <Compile Include="Game\TestGame.cs" />
+    <Compile Include="Game\UIManager.cs" />
+    <Compile Include="Graphics\AnimatedColladaModel.cs" />
+    <Compile Include="Graphics\AnimatedTexture.cs" />
+    <Compile Include="Graphics\Billboard.cs" />
+    <Compile Include="Graphics\ColladaModel.cs" />
+    <Compile Include="Graphics\LineManager2D.cs" />
+    <Compile Include="Graphics\Material.cs" />
+    <Compile Include="Graphics\PlaneRenderer.cs" />
+    <Compile Include="Graphics\SkinnedTangentVertex.cs" />
+    <Compile Include="Graphics\SpriteHelper.cs" />
+    <Compile Include="Graphics\TangentVertex.cs" />
+    <Compile Include="Graphics\Texture.cs" />
+    <Compile Include="Graphics\TextureFont.cs" />
+    <Compile Include="Graphics\UIRenderer.cs" />
+    <Compile Include="Helpers\ColorHelper.cs" />
+    <Compile Include="Helpers\Directories.cs" />
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\Input.cs" />
+    <Compile Include="Helpers\Log.cs" />
+    <Compile Include="Helpers\RandomHelper.cs" />
+    <Compile Include="Helpers\StringHelper.cs" />
+    <Compile Include="Helpers\Vector3Helper.cs" />
+    <Compile Include="Helpers\WindowsHelper.cs" />
+    <Compile Include="Helpers\XmlHelper.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shaders\CavePointNormalMapping.cs" />
+    <Compile Include="Shaders\PostScreenGlow.cs" />
+    <Compile Include="Shaders\PostScreenMenu.cs" />
+    <Compile Include="Shaders\RenderToTexture.cs" />
+    <Compile Include="Shaders\ShaderEffect.cs" />
+    <Compile Include="Shaders\ShaderTests.cs" />
+    <Compile Include="Shaders\ShadowMapBlur.cs" />
+    <Compile Include="Shaders\ShadowMapShader.cs" />
+    <Compile Include="Shaders\VBScreenHelper.cs" />
+    <Compile Include="Sounds\Sound.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content\Content.contentproj">
+      <Project>0b3120c0-cbad-475c-af80-32076a3fd827</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DungeonQuest.ico" />
+    <Content Include="DungeonQuest.png" />
+    <Content Include="Licence.txt" />
+    <Content Include="Readme.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.XML">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.Common.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v2.0\Microsoft.Xna.GameStudio.NestedContent.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

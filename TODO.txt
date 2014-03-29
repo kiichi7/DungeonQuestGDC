@@ -1,0 +1,95 @@
+Note: This is my TODO list from the 4 days at the GDC.
+
+day 1
+OK: player import + animation + switching
+OK: import static content
+OK: import player
+OK: rotate player when moving
+OK: improve loading performance for big cave
+OK: UI + font + level + location
+OK: finish final game UI
+OK: effect system
+OK: cave + collision
+
+day 2
+OK: improve shaders, post processing, add noise, etc.
+OK: monster AI
+OK: dynamic animation switching like RG menu
+OK: fight system, effects, damage
+OK: game screens, logic, and game classes
+
+day 3:
+OK: final game logic
+OK: finetuning
+OK: implement sound
+OK: quests
+
+day 4:
+OK: fighting
+
+bugs:
+OK: improved performance a lot by optimizing some internal code and using all ps3.0 shaders now (sad thing is it only runs with ps3.0 hardware now)
+TIPP: If you have a low spec ps3.0 graphic card (like the GeForce 6600 or lower) use a smaller resolution, the game will run much faster. Use the DungeonQuestSettings.xml file and enter a smaller resolution there (e.g. 800x600). The game is heavily GPU bound (like all my games) and it pushes several million polygons each frame (scene alone has almost a million polygons, but it has to be rendered 3 times for all shadow mapping and post processing effects). Runs on XBox 360 or GeForce 7x hardware very good with 100fps and more.
+OK: fixed parallax mapping for the cave and improved the specular effects, looks much nicer now. Also increased view distance and light affect range.
+OK: improved the music and sound effects, also added a lot more events
+OK: added many text messages to help the player understand the game better
+OK: check if computer can do ps 2.a, else abort!
+	OK: Actually everything now requires ps3.0 and is tested on those systems,
+		it was hard to make it run on the many different ps2.0, ps2.a, ps2.b
+		configurations and many problems came from that.
+OK: support 64bit systems
+OK: reduced glow in post screen
+OK: fixed game logic and quests
+OK: all game actions get a nice message now in the center
+	(killed ogre, got key, quest complete, new weapon, etc.)
+OK: implemented several new animations for hitting and dying
+OK: fixed text size in 3:4 resolutions (did only look correct in 16:9
+OK: improved gravity (much stronger now) and fixed several collision bugs
+OK: collecting key (show in ui)
+	OK: also allow dropping weapons
+	OK: text when selecting stuff from ground
+		OK: also when changing weapons, leveling up, etc.
+		OK: make font display stuff + fadeout for that!
+	OK: allow switching weapons (right/left shoulder buttons)
+	OK: text for weapon
+	OK: collecting key/weapon needs testing!
+OK: selected enemy ring (we forgot about that)
+OK: rumble when hit/getting hit
+OK: end screen (book link, credits, highscores?)
+	OK: allow exiting with back/esc, then show endscreen
+	OK: still show game in background (darken down?)
+ok: collision 2 rays
+ok: gravity*2
+ok: waffen
+ok: fireball
+ok: rename classes
+ok: text
+OK: show highscore list when game over
+OK: mouse support for dungeon quest (shooter like, just asdw for moving)
+OK: check all sounds, improve music (make louder)
+OK: block door when we don't got key!
+OK: sphere collision for monsters
+OK: make check if player or monster is below level, then fix! both
+	player and monster still disappear to often below surface :(
+OK: xbox support
+OK: shadows (at end)
+
+OK: zuckel gravity error
+OK: fix gravitation
+OK: monster rotate error 360 degrees
+OK: autoselect sword if found new better weapon
+OK: wizard fire like player and throw from helper
+OK: gelb enemy ring effect
+OK: icon
+OK: need some grunt sounds, ambient stuff, etc. very boring else!
+
+OK: fix move bug when in end screen
+OK: remove shift shadow map
+
+Release TODOs:
+OK: code cleanup
+OK: check all unit tests, improve code a little, add comments
+OK: test ps2.0 configuration!
+OK: test with Xbox 360 controller, the Xbox 360 itself and TV monitor support!
+OK: make game a little bit easier, far too hard for some people
+OK: installer, source code, test and release it!
